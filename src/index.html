@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lista de Tareas</title>
+		<link rel="shortcut icon" href="images/notes.png"/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!--
+			Navbar
+		-->
+		<div class="navbar">
+			<a href="#" onclick="refreshPage()" class="title-navbar">
+				Tasks Manager
+			</a>
+			<a href="#" onclick="calculateTotal()">Calcular Total</a>
+			<a href="#" onclick="eraseAll()">Borrar Todo</a>
+		</div>
+
+		<!--
+			Add task
+		-->
+		<div id="formulario" style="display: block">
+			<h2>Añadir Tarea</h2>
+			<div>
+				<label for="descripcion">Descripción:</label>
+				<input type="text" id="descripcion" />
+			</div>
+
+			<div>
+				<label for="precio">Precio:</label>
+				<input type="number" id="precio" />
+			</div>
+
+			<button onclick="addTask()">Añadir Tarea</button>
+		</div>
+
+		<!--
+			Tasks list
+		-->
+		<div id="lista" style="display: block">
+			<h2>Lista de Tareas</h2>
+			<ul id="listaTareas"></ul>
+		</div>
+
+		<script src="main.js"></script>
+	</body>
+</html>
